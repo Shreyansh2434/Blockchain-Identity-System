@@ -12,14 +12,22 @@ interface VerificationResult {
   };
 }
 
+// ✅ Backend URL: env first, then hard-coded Render URL
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL ||
+  "https://blockchain-identity-system.onrender.com";
+
 export default function VerifyPage() {
   const [sap, setSap] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<VerificationResult | null>(null);
 
-  const handleVerify = async () => {
+  const handleVerify = async (retry = false) => {
     if (!sap.trim()) {
-      setResult({ success: false, message: "Please enter SAP ID" });
+      setResult({
+        success: false,
+        message: "Please enter a SAP ID.",
+      });
       return;
     }
 
@@ -27,18 +35,22 @@ export default function VerifyPage() {
     setResult(null);
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/verify`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ sap }),
-        }
-      );
+      const res = await fetch(`${BACKEND_URL}/verify`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sap }),
+      });
 
-      const data = await response.json();
+      // If backend just woke up, retry once after 2s
+      if (!res.ok && !retry) {
+        await new Promise((r) => setTimeout(r, 2000));
+        return handleVerify(true);
+      }
+
+      const data = await res.json();
       setResult(data);
-    } catch {
+    } catch (err) {
+      console.error("Verify error:", err);
       setResult({
         success: false,
         message: "Cannot connect to backend. Please try again later.",
@@ -64,7 +76,7 @@ export default function VerifyPage() {
         />
 
         <button
-          onClick={handleVerify}
+          onClick={() => handleVerify()}
           className="bg-blue-600 hover:bg-blue-700 px-6 rounded text-white font-semibold"
           disabled={loading}
         >
@@ -86,10 +98,18 @@ export default function VerifyPage() {
 
           {result.success ? (
             <>
-              <p><b>Name:</b> {result.data.name}</p>
-              <p><b>Email:</b> {result.data.email}</p>
-              <p><b>SAP:</b> {result.data.sap}</p>
-              <p><b>Issued On:</b> {result.data.issueDate}</p>
+              <p>
+                <b>Name:</b> {result.data?.name}
+              </p>
+              <p>
+                <b>Email:</b> {result.data?.email}
+              </p>
+              <p>
+                <b>SAP:</b> {result.data?.sap}
+              </p>
+              <p>
+                <b>Issued On:</b> {result.data?.issueDate}
+              </p>
             </>
           ) : (
             <p>{result.message}</p>
