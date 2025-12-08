@@ -8,7 +8,15 @@ import verifyRouter from "./routes/verify.js";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://blockchain-identity-system.vercel.app",
+      "http://localhost:3000", // optional for local development
+    ],
+    methods: ["GET", "POST"],
+  })
+);
 
 /* Ensure SQLite exists (Render deploy fix) */
 const dbPath = path.resolve("database.sqlite");
