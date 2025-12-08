@@ -1,0 +1,7 @@
+node_modules
+database.sqlite
+dist
+.env
+.next
+.cache
+key-data/private.jwk.json   # very important

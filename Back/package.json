@@ -1,0 +1,38 @@
+{
+  "name": "veramo-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/api/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/api/server.js",
+    "dev": "nodemon --watch src --exec \"npm run build && node dist/api/server.js\""
+  },
+  "dependencies": {
+    "@digitalbazaar/ed25519-signature-2018": "^4.1.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^4.2.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@veramo/core": "^5.6.0",
+    "@veramo/credential-ld": "^6.0.0",
+    "@veramo/credential-w3c": "^5.6.0",
+    "@veramo/data-store": "^5.6.0",
+    "@veramo/did-manager": "^5.6.0",
+    "@veramo/did-provider-ethr": "^5.6.0",
+    "@veramo/did-provider-key": "^5.6.0",
+    "@veramo/did-provider-web": "^5.1.2",
+    "@veramo/did-resolver": "^5.6.0",
+    "@veramo/key-manager": "^5.6.0",
+    "@veramo/kms-local": "^5.6.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "dotenv": "^17.2.3",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

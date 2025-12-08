@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Shreyansh Rathaur",
+    "sap": "500118492",
+    "email": "Shreyansh.118492@stu.upes.ac.in",
+    "org": "UPES",
+    "context": "UPES Academic Identity",
+    "createdAt": "2025-12-07T20:18:09.334Z",
+    "secretKeyHex": "7cf38d205b3099b9f75cb9520938c39c0155bc4f1a649034180ab21612b43d8b",
+    "secretKeyBase64": "fPONIFswmbn3XLlSCTjDnAFVvE8aZJA0GAqyFhK0PYs"
+  },
+  {
+    "name": "Akash Yadav",
+    "sap": "500118493",
+    "email": "Akash.118493@stu.upes.ac.in",
+    "org": "UPES",
+    "context": "UPES Academic Identity",
+    "createdAt": "2025-12-07T20:18:56.926Z",
+    "secretKeyHex": "4cf191d5b35369291e6d471ee822e4432806bc520a98b50758118990be108c28",
+    "secretKeyBase64": "TPGR1bNTaSkebUce6CLkQygGvFIKmLUHWBGJkL4QjCg"
+  },
+  {
+    "name": "Rudraksh Rohilla",
+    "sap": "500117698",
+    "email": "Rudraksh.117698@stu.upes.ac.in",
+    "org": "UPES",
+    "context": "UPES Academic Identity",
+    "createdAt": "2025-12-07T20:38:39.459Z",
+    "secretKeyHex": "011827c50f2a5d5dda987bce7af3b562b836bdb1e18ef76aac96b66bab5926d4",
+    "secretKeyBase64": "ARgnxQ8qXV3amHvOevO1Yrg2vbHhjvdqrJa2a6tZJtQ"
+  },
+  {
+    "name": "Aakarshan Tyagi",
+    "sap": "500118141",
+    "email": "Aakarshan.118141@stu.upes.ac.in",
+    "issuedAt": "2025-12-07T22:43:02.910Z"
+  }
+]
