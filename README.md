@@ -80,7 +80,7 @@ Cloud	Render (Backend), Vercel (Frontend)
 👥 Team / Contributors
 Name	Role
 Shreyansh Rathaur	Lead Developer
-Aakash Yadav	System Designer
+Akash Yadav	System Designer
 Rudraksh Rohilla	Blockchain Research
 Aakarshan Tyagi	Backend & API
 Shreya Sengar	UI/UX & Testing
