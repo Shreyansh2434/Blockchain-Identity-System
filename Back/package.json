@@ -4,9 +4,11 @@
   "type": "module",
   "main": "dist/api/server.js",
   "scripts": {
+    "create:credential": "node --loader ts-node/esm src/create-credential.ts",
     "build": "tsc",
     "start": "node dist/api/server.js",
-    "dev": "nodemon --watch src --exec \"npm run build && node dist/api/server.js\""
+    "dev": "nodemon --watch src --exec \"npm run build && node dist/api/server.js\"",
+    "dev-api": "npm run dev"
   },
   "dependencies": {
     "@digitalbazaar/ed25519-signature-2018": "^4.1.0",
@@ -25,8 +27,9 @@
     "@veramo/key-manager": "^5.6.0",
     "@veramo/kms-local": "^5.6.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "libsodium-wrappers": "^0.8.2",
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {

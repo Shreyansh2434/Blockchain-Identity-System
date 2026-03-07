@@ -11,10 +11,7 @@ usersRouter.get("/", (_req, res) => {
     const raw = fs.readFileSync(metaPath, "utf-8");
     const users = JSON.parse(raw);
 
-    return res.json({
-      success: true,
-      users,
-    });
+    return res.json(users);
   } catch (err) {
     console.error("Users fetch error:", err);
     return res.status(500).json({
