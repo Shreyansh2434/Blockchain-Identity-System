@@ -5,3 +5,8 @@ dist
 .next
 .cache
 key-data/private.jwk.json   # very important
+key-data/
+.env
+*.pem
+*.key
+node_modules/
