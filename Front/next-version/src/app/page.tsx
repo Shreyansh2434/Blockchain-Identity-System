@@ -63,7 +63,7 @@ export default function HomePage() {
           </Link>
         </motion.div>
 
-        {/* TEAM / PARTNERS */}
+        {/* TEAM / PARTNERS
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function HomePage() {
             <div className="p-4 bg-white/10 rounded-xl">Aakarshan Tyagi</div>
             <div className="p-4 bg-white/10 rounded-xl">Shreya Sengar</div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
