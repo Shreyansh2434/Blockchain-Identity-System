@@ -4,7 +4,7 @@
 
 # 🔐 Blockchain Identity System
 
-### *Self-Sovereign Identity • Verifiable Credentials • Tamper-Proof Trust*
+### _Self-Sovereign Identity • Verifiable Credentials • Tamper-Proof Trust_
 
 <br/>
 
@@ -34,22 +34,22 @@
 
 ## 📌 Table of Contents
 
-| # | Section |
-|:---:|---------|
-| 01 | [The Problem We Solved](#-the-problem-we-solved) |
-| 02 | [System at a Glance](#-system-at-a-glance) |
-| 03 | [Live Deployment](#-live-deployment) |
-| 04 | [System Architecture](#-system-architecture) |
-| 05 | [Project Structure](#-project-structure) |
-| 06 | [Credential & Identity Engine](#-credential--identity-engine) |
-| 07 | [W3C Standards Compliance](#-w3c-standards-compliance) |
-| 08 | [Key Features](#-key-features) |
-| 09 | [Tech Stack](#-tech-stack) |
-| 10 | [How It Works](#-how-it-works--end-to-end) |
-| 11 | [Installation & Setup](#-installation--setup) |
-| 12 | [API Endpoints](#-api-endpoints) |
-| 13 | [Team](#-team) |
-| 14 | [Future Enhancements](#-future-enhancements) |
+|  #  | Section                                                       |
+| :-: | ------------------------------------------------------------- |
+| 01  | [The Problem We Solved](#-the-problem-we-solved)              |
+| 02  | [System at a Glance](#-system-at-a-glance)                    |
+| 03  | [Live Deployment](#-live-deployment)                          |
+| 04  | [System Architecture](#-system-architecture)                  |
+| 05  | [Project Structure](#-project-structure)                      |
+| 06  | [Credential & Identity Engine](#-credential--identity-engine) |
+| 07  | [W3C Standards Compliance](#-w3c-standards-compliance)        |
+| 08  | [Key Features](#-key-features)                                |
+| 09  | [Tech Stack](#-tech-stack)                                    |
+| 10  | [How It Works](#-how-it-works--end-to-end)                    |
+| 11  | [Installation & Setup](#-installation--setup)                 |
+| 12  | [API Endpoints](#-api-endpoints)                              |
+| 13  | [Team](#-team)                                                |
+| 14  | [Future Enhancements](#-future-enhancements)                  |
 
 ---
 
@@ -57,43 +57,43 @@
 
 > **Credential fraud costs institutions billions annually. Traditional systems are centralized, easily forged, and slow to verify.** Our solution: blockchain-anchored credentials with cryptographic proof.
 
-| Issue | Traditional System | This System |
-|:---:|---|---|
-| **Forgery Risk** | ⚠️ High — easy to fake | ✅ Zero — cryptographically signed |
-| **Verification Speed** | 📅 7–14 days | ⚡ Instant (< 1 second) |
-| **Who Controls Identity** | 🏛️ Issuing institution | 👤 The credential holder |
-| **Portability** | 🔒 Institution-locked | 🌍 Portable — use anywhere |
-| **Privacy** | 📤 Shared with issuer | 🔍 Selective disclosure only |
-| **Standard** | 🏗️ Proprietary | 📋 W3C Verifiable Credentials |
-| **Auditability** | 📝 Manual checks | ⛓️ Blockchain-immutable logs |
+|           Issue           | Traditional System     | This System                        |
+| :-----------------------: | ---------------------- | ---------------------------------- |
+|     **Forgery Risk**      | ⚠️ High — easy to fake | ✅ Zero — cryptographically signed |
+|  **Verification Speed**   | 📅 7–14 days           | ⚡ Instant (< 1 second)            |
+| **Who Controls Identity** | 🏛️ Issuing institution | 👤 The credential holder           |
+|      **Portability**      | 🔒 Institution-locked  | 🌍 Portable — use anywhere         |
+|        **Privacy**        | 📤 Shared with issuer  | 🔍 Selective disclosure only       |
+|       **Standard**        | 🏗️ Proprietary         | 📋 W3C Verifiable Credentials      |
+|     **Auditability**      | 📝 Manual checks       | ⛓️ Blockchain-immutable logs       |
 
 ---
 
 ## 📊 System at a Glance
 
-| Attribute | Detail |
-|-----------|--------|
-| **Project Type** | Decentralized Digital Identity & Credential Management |
-| **Credential Standard** | W3C Verifiable Credentials (VC Data Model v1.1+) |
-| **Identity Framework** | Decentralized Identifiers (DIDs) + Veramo Agent |
-| **Blockchain Support** | Ethereum-ready (extensible to Polygon, etc.) |
-| **Credential Types** | Academic • Professional • Certifications • Badges |
-| **Verification Time** | Sub-second cryptographic validation |
-| **Storage** | SQLite (local) + Optional blockchain anchoring |
-| **User Roles** | Issuer (Institution) • Holder (User) • Verifier (Any party) |
-| **Frontend Hosting** | Vercel (Next.js) |
-| **Backend Hosting** | Render (Node.js + Express) |
+| Attribute               | Detail                                                      |
+| ----------------------- | ----------------------------------------------------------- |
+| **Project Type**        | Decentralized Digital Identity & Credential Management      |
+| **Credential Standard** | W3C Verifiable Credentials (VC Data Model v1.1+)            |
+| **Identity Framework**  | Decentralized Identifiers (DIDs) + Veramo Agent             |
+| **Blockchain Support**  | Ethereum-ready (extensible to Polygon, etc.)                |
+| **Credential Types**    | Academic • Professional • Certifications • Badges           |
+| **Verification Time**   | Sub-second cryptographic validation                         |
+| **Storage**             | SQLite (local) + Optional blockchain anchoring              |
+| **User Roles**          | Issuer (Institution) • Holder (User) • Verifier (Any party) |
+| **Frontend Hosting**    | Vercel (Next.js)                                            |
+| **Backend Hosting**     | Render (Node.js + Express)                                  |
 
 ---
 
 ## 🌐 Live Deployment
 
-| Service | Status | URL |
-|---------|--------|-----|
-| 🌐 **Frontend** (Next.js Dashboard) | 🟢 Active | [blockchain-identity-system.vercel.app](https://blockchain-identity-system.vercel.app) |
-| ⚡ **Backend** (Express + Veramo) | 🟢 Active | [blockchain-identity-system.onrender.com](https://blockchain-identity-system.onrender.com) |
-| 🏥 **API Health Check** | ⚡ Monitor | [`/health`](https://blockchain-identity-system.onrender.com/health) |
-| 📦 **Source Code** | GitHub | [Shreyansh2434/Blockchain-Identity-System](https://github.com/Shreyansh2434/Blockchain-Identity-System) |
+| Service                             | Status     | URL                                                                                                     |
+| ----------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------- |
+| 🌐 **Frontend** (Next.js Dashboard) | 🟢 Active  | [blockchain-identity-system.vercel.app](https://blockchain-identity-system.vercel.app)                  |
+| ⚡ **Backend** (Express + Veramo)   | 🟢 Active  | [blockchain-identity-system.onrender.com](https://blockchain-identity-system.onrender.com)              |
+| 🏥 **API Health Check**             | ⚡ Monitor | [`/health`](https://blockchain-identity-system.onrender.com/health)                                     |
+| 📦 **Source Code**                  | GitHub     | [Shreyansh2434/Blockchain-Identity-System](https://github.com/Shreyansh2434/Blockchain-Identity-System) |
 
 > ⚠️ **Note:** The Render free tier spins down after inactivity. First request takes 30–50 seconds. Subsequent requests are instant.
 
@@ -102,45 +102,50 @@
 ## 🏗 System Architecture
 
 ```
-ISSUER (Institution) ─────── HOLDER (User) ─────── VERIFIER (Any Party)
-        │                           │                       │
-        ▼                           ▼                       ▼
-┌─────────────────────────────────────────────────────────────────┐
-│             IDENTITY AGENT LAYER (Veramo)                       │
-│  ┌─────────────────────────────────────────────────────────┐  │
-│  │  DID Resolver • Credential Issuer • Holder Storage      │  │
-│  └─────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-                          │
-        ┌─────────────────┼─────────────────┐
-        ▼                 ▼                 ▼
-┌──────────────┐  ┌──────────────────┐  ┌────────────────┐
-│  ISSUE API   │  │  HOLDER SERVICE  │  │  VERIFY API    │
-│  Create VC   │  │  Store Creds     │  │  Validate VC   │
-│  Sign & Date │  │  Export Portable │  │  Check Sig     │
-└──────────────┘  └──────────────────┘  └────────────────┘
-        │                 │                     │
-        └─────────────────┼─────────────────────┘
-                          ▼
-┌─────────────────────────────────────────────────────────────────┐
-│  PERSISTENCE LAYER                                              │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐     │
-│  │   SQLite DB  │    │  Blockchain  │    │  Key Storage │     │
-│  │   (Local)    │    │  (Optional)  │    │  (Encrypted) │     │
-│  └──────────────┘    └──────────────┘    └──────────────┘     │
-└─────────────────────────────────────────────────────────────────┘
-                          │
-        ┌─────────────────┴─────────────────┐
-        ▼                                   ▼
-┌──────────────────┐            ┌──────────────────┐
-│  FRONTEND UI     │            │  REST API        │
-│  (Next.js)       │            │  (Express)       │
-│  • Issue Panel   │            │  • /vc/issue     │
-│  • Hold Panel    │            │  • /vc/verify    │
-│  • Verify Panel  │            │  • /vc/export    │
-│  • 3D Homepage   │            │  • /dids/*       │
-└──────────────────┘            └──────────────────┘
-       (Vercel)                    (Render)
+  ISSUER              HOLDER              VERIFIER
+(Institution)        (User)            (Any Party)
+    |                   |                   |
+    v                   v                   v
+    +------------------+---------------------+
+    |                                        |
+    |  IDENTITY AGENT LAYER (Veramo)         |
+    |  - DID Resolver                        |
+    |  - Credential Issuer                   |
+    |  - Holder Storage                      |
+    |                                        |
+    +----------------+-----------------------+
+                      |
+        +-------------|----------+
+        |             |          |
+        v             v          v
+    +--------+   +----------+  +----------+
+    | ISSUE  |   |  HOLDER  |  | VERIFY   |
+    |  API   |   | SERVICE  |  |   API    |
+    +--------+   +----------+  +----------+
+    | Create |   | Store    |  | Validate |
+    | Sign   |   | Export   |  | Check    |
+    +--------+   +----------+  +----------+
+        |             |          |
+        +-----------+-----------+
+                    |
+        +-----------v-----------+
+        |                       |
+        | PERSISTENCE LAYER     |
+        | - SQLite DB (Local)   |
+        | - Blockchain (Opt)    |
+        | - Key Storage (Enc)   |
+        |                       |
+        +-----------+-----------+
+                    |
+        +-----------+-----------+
+        |                       |
+        v                       v
+    +---------+         +-----------+
+    |FRONTEND |         | REST API  |
+    | (Next)  |         | (Express) |
+    +---------+         +-----------+
+    | Vercel  |         | Render    |
+    +---------+         +-----------+
 ```
 
 ---
@@ -223,95 +228,95 @@ The system deploys a **three-layer credential architecture** powered by Veramo:
 
 ### Layer 1 — DID (Decentralized Identifier)
 
-| Property | Detail |
-|----------|--------|
-| **Standard** | W3C DID Core Specification |
-| **Format** | `did:ethr:0x...` (Ethereum) • Extensible to other chains |
-| **Resolution** | Universal Resolver compatible |
-| **Key Management** | Hierarchical deterministic key derivation |
-| **Backup** | Exportable seed phrases for key recovery |
+| Property           | Detail                                                   |
+| ------------------ | -------------------------------------------------------- |
+| **Standard**       | W3C DID Core Specification                               |
+| **Format**         | `did:ethr:0x...` (Ethereum) • Extensible to other chains |
+| **Resolution**     | Universal Resolver compatible                            |
+| **Key Management** | Hierarchical deterministic key derivation                |
+| **Backup**         | Exportable seed phrases for key recovery                 |
 
 ### Layer 2 — Verifiable Credentials (VC)
 
-| Property | Detail |
-|----------|--------|
-| **Standard** | W3C VC Data Model 1.1 |
-| **Signature** | EdDSA / ECDSA cryptographic signing |
-| **Claims** | Extensible JSON-LD context |
-| **Proof** | LinkedDataProof with timestamp |
+| Property       | Detail                               |
+| -------------- | ------------------------------------ |
+| **Standard**   | W3C VC Data Model 1.1                |
+| **Signature**  | EdDSA / ECDSA cryptographic signing  |
+| **Claims**     | Extensible JSON-LD context           |
+| **Proof**      | LinkedDataProof with timestamp       |
 | **Revocation** | Optional revocation registry support |
 
 ### Layer 3 — Selective Disclosure
 
-| Property | Detail |
-|----------|--------|
-| **Privacy** | Users choose which claims to reveal |
-| **Use Case** | Prove qualification without exposing birth date |
-| **Verification** | Cryptographic ZK-style proofs |
-| **Granularity** | Claim-level disclosure control |
+| Property         | Detail                                          |
+| ---------------- | ----------------------------------------------- |
+| **Privacy**      | Users choose which claims to reveal             |
+| **Use Case**     | Prove qualification without exposing birth date |
+| **Verification** | Cryptographic ZK-style proofs                   |
+| **Granularity**  | Claim-level disclosure control                  |
 
 ### Supporting Infrastructure
 
-| Component | Purpose |
-|-----------|---------|
-| **Veramo Agent** | Universal identity orchestrator |
-| **SQLite Store** | Persistent credential & key storage |
-| **Key Management** | Hardware-backed signing (optional) |
-| **DID Registry** | Blockchain anchoring for non-repudiation |
+| Component          | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| **Veramo Agent**   | Universal identity orchestrator          |
+| **SQLite Store**   | Persistent credential & key storage      |
+| **Key Management** | Hardware-backed signing (optional)       |
+| **DID Registry**   | Blockchain anchoring for non-repudiation |
 
 ---
 
 ## 📋 W3C Standards Compliance
 
-| Standard | Implementation | Status |
-|----------|---|---|
-| **W3C DID Core** | Decentralized Identifiers | ✅ Full Support |
-| **W3C VC Data Model** | Verifiable Credentials | ✅ Full Support |
-| **Linked Data Proofs** | Cryptographic signing | ✅ Implemented |
-| **JSON-LD** | Data model serialization | ✅ Enabled |
-| **Presentation Exchange** | VP request/response | 🔄 In Development |
+| Standard                  | Implementation            | Status            |
+| ------------------------- | ------------------------- | ----------------- |
+| **W3C DID Core**          | Decentralized Identifiers | ✅ Full Support   |
+| **W3C VC Data Model**     | Verifiable Credentials    | ✅ Full Support   |
+| **Linked Data Proofs**    | Cryptographic signing     | ✅ Implemented    |
+| **JSON-LD**               | Data model serialization  | ✅ Enabled        |
+| **Presentation Exchange** | VP request/response       | 🔄 In Development |
 
 ---
 
 ## ✨ Key Features
 
-| Feature | Description |
-|---------|-------------|
-| 🎓 **Issue Credentials** | Institutions create tamper-proof, cryptographically signed certificates |
-| 👤 **Self-Sovereign Identity** | Users own & control their credentials — not locked to institutions |
-| ✔️ **Instant Verification** | Anyone can verify credentials in < 1 second without calling issuer |
-| 🔐 **Cryptographic Security** | EdDSA/ECDSA signatures prove authenticity & integrity |
-| 📱 **Portable Credentials** | Export credentials as JSON — use anywhere, anytime |
-| 🎨 **Interactive 3D UI** | Three.js powered animations & immersive UX |
-| 🔑 **Key Management** | Hierarchical deterministic key derivation with seed-phrase backup |
-| 📊 **Audit Trail** | Blockchain-immutable log of credential issuance & verification |
-| 🔍 **Selective Disclosure** | Reveal only relevant claims — keep sensitive data private |
-| 🛡️ **Role-Based Access** | Issuer • Holder • Verifier — granular permissions |
-| 📲 **Responsive Design** | Mobile-first UI with Tailwind CSS |
-| 🌍 **Multi-Chain Ready** | Architecture supports Ethereum, Polygon, and custom DIDs |
+| Feature                        | Description                                                             |
+| ------------------------------ | ----------------------------------------------------------------------- |
+| 🎓 **Issue Credentials**       | Institutions create tamper-proof, cryptographically signed certificates |
+| 👤 **Self-Sovereign Identity** | Users own & control their credentials — not locked to institutions      |
+| ✔️ **Instant Verification**    | Anyone can verify credentials in < 1 second without calling issuer      |
+| 🔐 **Cryptographic Security**  | EdDSA/ECDSA signatures prove authenticity & integrity                   |
+| 📱 **Portable Credentials**    | Export credentials as JSON — use anywhere, anytime                      |
+| 🎨 **Interactive 3D UI**       | Three.js powered animations & immersive UX                              |
+| 🔑 **Key Management**          | Hierarchical deterministic key derivation with seed-phrase backup       |
+| 📊 **Audit Trail**             | Blockchain-immutable log of credential issuance & verification          |
+| 🔍 **Selective Disclosure**    | Reveal only relevant claims — keep sensitive data private               |
+| 🛡️ **Role-Based Access**       | Issuer • Holder • Verifier — granular permissions                       |
+| 📲 **Responsive Design**       | Mobile-first UI with Tailwind CSS                                       |
+| 🌍 **Multi-Chain Ready**       | Architecture supports Ethereum, Polygon, and custom DIDs                |
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Language** | TypeScript | Type-safe backend & frontend |
-| **Frontend Framework** | Next.js 14+ | SSR • optimization • routing |
-| **Styling** | Tailwind CSS | Utility-first responsive design |
-| **Animation** | Framer Motion | Fluid component transitions |
-| **3D Graphics** | Three.js | Interactive 3D homepage scene |
-| **Backend Framework** | Express.js | Lightweight REST API |
-| **Identity Agent** | Veramo | W3C DID/VC orchestration |
-| **Credential Standard** | W3C VC | Industry-standard format |
-| **DID Method** | ethr-did | Ethereum-anchored identifiers |
-| **Cryptography** | libsodium • node-jose | Signing & encryption |
-| **Database** | SQLite | Persistent local storage |
-| **ORM** | Better-sqlite3 | Synchronous database access |
-| **API Documentation** | Swagger/OpenAPI | Auto-generated API docs |
-| **Frontend Hosting** | Vercel | Edge deployment & caching |
-| **Backend Hosting** | Render | Containerized Node.js deployment |
-| **Environment** | dotenv | Secure configuration management |
+| Layer                   | Technology            | Purpose                          |
+| ----------------------- | --------------------- | -------------------------------- |
+| **Language**            | TypeScript            | Type-safe backend & frontend     |
+| **Frontend Framework**  | Next.js 14+           | SSR • optimization • routing     |
+| **Styling**             | Tailwind CSS          | Utility-first responsive design  |
+| **Animation**           | Framer Motion         | Fluid component transitions      |
+| **3D Graphics**         | Three.js              | Interactive 3D homepage scene    |
+| **Backend Framework**   | Express.js            | Lightweight REST API             |
+| **Identity Agent**      | Veramo                | W3C DID/VC orchestration         |
+| **Credential Standard** | W3C VC                | Industry-standard format         |
+| **DID Method**          | ethr-did              | Ethereum-anchored identifiers    |
+| **Cryptography**        | libsodium • node-jose | Signing & encryption             |
+| **Database**            | SQLite                | Persistent local storage         |
+| **ORM**                 | Better-sqlite3        | Synchronous database access      |
+| **API Documentation**   | Swagger/OpenAPI       | Auto-generated API docs          |
+| **Frontend Hosting**    | Vercel                | Edge deployment & caching        |
+| **Backend Hosting**     | Render                | Containerized Node.js deployment |
+| **Environment**         | dotenv                | Secure configuration management  |
 
 ---
 
@@ -319,37 +324,37 @@ The system deploys a **three-layer credential architecture** powered by Veramo:
 
 ### 👨‍🎓 Issuance Flow (Institution → Credential)
 
-| Step | Module | Action |
-|:----:|--------|--------|
-| **1** | `IssuanceForm.tsx` | Institution fills credential template |
-| **2** | `POST /vc/issue` | Frontend sends request to backend API |
-| **3** | `vcService.ts` | Backend validates issuer identity |
-| **4** | `veramo-agent.ts` | Agent creates VC object with claims & proof |
-| **5** | `crypto utilities` | EdDSA signature signs credential + timestamp |
-| **6** | `SQLite` | Credential stored with issuer's DID & signature |
-| **7** | `Response` | Signed VC returned as JSON |
+| Step  | Module             | Action                                          |
+| :---: | ------------------ | ----------------------------------------------- |
+| **1** | `IssuanceForm.tsx` | Institution fills credential template           |
+| **2** | `POST /vc/issue`   | Frontend sends request to backend API           |
+| **3** | `vcService.ts`     | Backend validates issuer identity               |
+| **4** | `veramo-agent.ts`  | Agent creates VC object with claims & proof     |
+| **5** | `crypto utilities` | EdDSA signature signs credential + timestamp    |
+| **6** | `SQLite`           | Credential stored with issuer's DID & signature |
+| **7** | `Response`         | Signed VC returned as JSON                      |
 
 ### 🎒 Holding & Export (User → Wallet)
 
-| Step | Module | Action |
-|:----:|--------|--------|
+| Step  | Module             | Action                                        |
+| :---: | ------------------ | --------------------------------------------- |
 | **1** | `HolderWallet.tsx` | User imports credential or receives via email |
-| **2** | `holderService.ts` | Backend verifies signature before accepting |
-| **3** | `SQLite` | Credential stored in user's encrypted store |
-| **4** | `Export Button` | User exports as JSON or generates QR code |
-| **5** | `Backup` | Optional seed phrase generation |
+| **2** | `holderService.ts` | Backend verifies signature before accepting   |
+| **3** | `SQLite`           | Credential stored in user's encrypted store   |
+| **4** | `Export Button`    | User exports as JSON or generates QR code     |
+| **5** | `Backup`           | Optional seed phrase generation               |
 
 ### ✅ Verification Flow (Anyone → Proof)
 
-| Step | Module | Action |
-|:----:|--------|--------|
-| **1** | `VerifyWidget.tsx` | Verifier uploads/scans credential file |
-| **2** | `POST /vc/verify` | Frontend sends credential to verification endpoint |
-| **3** | `verifyService.ts` | Backend extracts signature & issuer DID |
-| **4** | `veramo-agent.ts` | Agent resolves issuer DID → public key |
-| **5** | `Crypto validation` | Signature verified against credential data |
-| **6** | `Response` | Returns: ✅ VALID or ❌ INVALID |
-| **7** | `Dashboard` | Verifier sees issuer, type, date, expiration |
+| Step  | Module              | Action                                             |
+| :---: | ------------------- | -------------------------------------------------- |
+| **1** | `VerifyWidget.tsx`  | Verifier uploads/scans credential file             |
+| **2** | `POST /vc/verify`   | Frontend sends credential to verification endpoint |
+| **3** | `verifyService.ts`  | Backend extracts signature & issuer DID            |
+| **4** | `veramo-agent.ts`   | Agent resolves issuer DID → public key             |
+| **5** | `Crypto validation` | Signature verified against credential data         |
+| **6** | `Response`          | Returns: ✅ VALID or ❌ INVALID                    |
+| **7** | `Dashboard`         | Verifier sees issuer, type, date, expiration       |
 
 ---
 
@@ -357,11 +362,11 @@ The system deploys a **three-layer credential architecture** powered by Veramo:
 
 ### Prerequisites
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| Node.js | 18.x–20.x | JavaScript runtime |
-| npm or yarn | Latest | Package manager |
-| Git | Latest | Version control |
+| Tool        | Version   | Purpose            |
+| ----------- | --------- | ------------------ |
+| Node.js     | 18.x–20.x | JavaScript runtime |
+| npm or yarn | Latest    | Package manager    |
+| Git         | Latest    | Version control    |
 
 ### Clone Repository
 
@@ -380,11 +385,13 @@ npm run dev
 ```
 
 **Backend runs on:**
+
 ```
 http://localhost:5000
 ```
 
 **API health check:**
+
 ```bash
 curl http://localhost:5000/health
 ```
@@ -398,6 +405,7 @@ npm run dev
 ```
 
 **Frontend runs on:**
+
 ```
 http://localhost:3000
 ```
@@ -441,6 +449,7 @@ GET /health
 ```
 
 **Response:**
+
 ```json
 {
   "status": "ok",
@@ -471,6 +480,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "vc": {
@@ -505,6 +515,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "valid": true,
@@ -529,6 +540,7 @@ Authorization: Bearer <token>
 ```
 
 **Response:**
+
 ```json
 {
   "did": "did:ethr:0x...",
@@ -552,6 +564,7 @@ GET /api/dids/:did
 ```
 
 **Response:**
+
 ```json
 {
   "@context": "https://w3id.org/did/v0.11",
@@ -582,9 +595,12 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
-  "exportedCredential": { /* VC object */ },
+  "exportedCredential": {
+    /* VC object */
+  },
   "qrCode": "data:image/png;base64,...",
   "downloadUrl": "https://..."
 }
@@ -594,42 +610,42 @@ Content-Type: application/json
 
 ## 👥 Team
 
-| Member | Role | Contributions |
-|--------|------|---|
-| **Shreyansh Rathaur** | Lead Developer & Architect | System design • Veramo integration • API architecture |
-| **Akash Yadav** | System Designer & DevOps | Infrastructure • Deployment pipelines • Optimization |
-| **Rudraksh Rohilla** | Blockchain Research Lead | DID standards • W3C VC implementation • Chain integrations |
-| **Aakarshan Tyagi** | Backend Engineer | Express API • Credential services • Database schema |
-| **Shreya Sengar** | Frontend & UX Engineer | Next.js frontend • 3D animations • UI/UX design |
+| Member                | Role                       | Contributions                                              |
+| --------------------- | -------------------------- | ---------------------------------------------------------- |
+| **Shreyansh Rathaur** | Lead Developer & Architect | System design • Veramo integration • API architecture      |
+| **Akash Yadav**       | System Designer & DevOps   | Infrastructure • Deployment pipelines • Optimization       |
+| **Rudraksh Rohilla**  | Blockchain Research Lead   | DID standards • W3C VC implementation • Chain integrations |
+| **Aakarshan Tyagi**   | Backend Engineer           | Express API • Credential services • Database schema        |
+| **Shreya Sengar**     | Frontend & UX Engineer     | Next.js frontend • 3D animations • UI/UX design            |
 
 ---
 
 ## 🔮 Future Enhancements
 
-| Feature | Status | Timeline |
-|---------|--------|----------|
-| **NFT-Based Certificates** | 🔄 In Development | Q2 2026 |
-| **Multi-Chain Support** | 📋 Planned | Q2 2026 |
-| **Mobile Wallet** | 📋 Planned | Q3 2026 |
-| **IPFS Integration** | 🔄 Researching | Q3 2026 |
-| **Presentation Exchange** | 📋 Planned | Q4 2026 |
-| **Revocation Registry** | 📋 Planned | Q1 2027 |
-| **Governance Framework** | 🔄 Designing | Q1 2027 |
-| **ZK-Proof Support** | 📋 Planned | Q2 2027 |
+| Feature                    | Status            | Timeline |
+| -------------------------- | ----------------- | -------- |
+| **NFT-Based Certificates** | 🔄 In Development | Q2 2026  |
+| **Multi-Chain Support**    | 📋 Planned        | Q2 2026  |
+| **Mobile Wallet**          | 📋 Planned        | Q3 2026  |
+| **IPFS Integration**       | 🔄 Researching    | Q3 2026  |
+| **Presentation Exchange**  | 📋 Planned        | Q4 2026  |
+| **Revocation Registry**    | 📋 Planned        | Q1 2027  |
+| **Governance Framework**   | 🔄 Designing      | Q1 2027  |
+| **ZK-Proof Support**       | 📋 Planned        | Q2 2027  |
 
 ---
 
 ## 🛡️ Security & Privacy
 
-| Aspect | Implementation |
-|--------|---|
-| **Credential Signing** | ✅ EdDSA/ECDSA cryptographic signatures |
-| **Key Storage** | ✅ Encrypted local SQLite database |
-| **DID Control** | ✅ Only credential holder controls private keys |
-| **Data Privacy** | ✅ Selective disclosure — users choose what to reveal |
-| **Audit Trail** | ✅ Immutable blockchain-anchored logs (optional) |
-| **Transport Security** | ✅ HTTPS/TLS enforced in production |
-| **No Central Authority** | ✅ Fully decentralized identity model |
+| Aspect                   | Implementation                                        |
+| ------------------------ | ----------------------------------------------------- |
+| **Credential Signing**   | ✅ EdDSA/ECDSA cryptographic signatures               |
+| **Key Storage**          | ✅ Encrypted local SQLite database                    |
+| **DID Control**          | ✅ Only credential holder controls private keys       |
+| **Data Privacy**         | ✅ Selective disclosure — users choose what to reveal |
+| **Audit Trail**          | ✅ Immutable blockchain-anchored logs (optional)      |
+| **Transport Security**   | ✅ HTTPS/TLS enforced in production                   |
+| **No Central Authority** | ✅ Fully decentralized identity model                 |
 
 ---
 
@@ -665,14 +681,14 @@ This project was developed as a **Final Year Major Project** for academic purpos
 ## 🎯 Vision Statement
 
 > **"Identity belongs to individuals — not institutions.**
-> 
+>
 > **This project is a step toward a world where people truly own their credentials."**
 
 <br/>
 
 Built with 🔐 security • 🔗 decentralization • 🎨 design • 🚀 innovation
 
-*UPES • Final Year Major Project • 2025–2026*
+_UPES • Final Year Major Project • 2025–2026_
 
 <br/>
 
