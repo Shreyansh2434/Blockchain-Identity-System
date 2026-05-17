@@ -187,3 +187,40 @@ main {
   }
 }
 
+/* Scrollbar Styling - Premium Dark Theme */
+/* Chrome, Edge and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, #0A0E27 0%, #1a2f6f 50%, #001F5C 100%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 127, 255, 0.4);
+  border-radius: 10px;
+  border: 2px solid rgba(15, 127, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 127, 255, 0.6);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(15, 127, 255, 0.8);
+}
+
+/* Firefox */
+* {
+  scrollbar-color: rgba(15, 127, 255, 0.4) transparent;
+  scrollbar-width: thin;
+}
+
+/* Firefox hover effect */
+*::-moz-scrollbar-thumb:hover {
+  background: rgba(15, 127, 255, 0.6);
+}
