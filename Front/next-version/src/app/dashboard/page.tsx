@@ -52,8 +52,16 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-40 left-1/4 w-96 h-96 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" />
-      <div className="absolute bottom-40 right-1/4 w-96 h-96 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float animation-delay-2000" />
+      <motion.div
+        className="absolute top-40 left-1/4 w-96 h-96 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-40 right-1/4 w-96 h-96 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, delay: 2, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <motion.div
         initial={{ opacity: 0 }}

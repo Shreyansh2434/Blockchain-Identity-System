@@ -32,8 +32,16 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-gradient-luxury" />
       
       {/* Animated background elements */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float animation-delay-2000" />
+      <motion.div
+        className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, delay: 2, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       {/* 3D Animated Background */}
       <Canvas className="absolute inset-0 z-0 opacity-30">
