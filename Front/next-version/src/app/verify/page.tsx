@@ -60,165 +60,94 @@ export default function VerifyPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
-      {/* Background elements */}
-      <motion.div
-        className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-15"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-
+    <div className="min-h-screen pt-32 pb-20 px-6 bg-gradient-to-br from-[#0A0E27] via-[#1a2f6f] to-[#001F5C]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 flex flex-col items-center text-center"
+        className="max-w-2xl mx-auto"
       >
-        {/* HEADER */}
-        <motion.div
-          initial={{ y: -30, opacity: 0 }}
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl font-bold text-white mb-2 text-center"
         >
-          <h1 className="text-5xl sm:text-6xl font-extrabold mb-4">
-            Verify Your
-            <span className="block bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] bg-clip-text text-transparent">
-              Certificate
-            </span>
-          </h1>
-          <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
-            Enter your SAP ID to authenticate your digital credential
-          </p>
-        </motion.div>
+          Verify Your Certificate
+        </motion.h1>
 
-        {/* INPUT FORM */}
+        <motion.p
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-gray-300 text-center mb-12"
+        >
+          Enter your SAP ID to verify your credential
+        </motion.p>
+
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-12 w-full max-w-2xl"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col sm:flex-row gap-4 mb-8"
         >
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <motion.input
-              whileFocus={{ scale: 1.02 }}
-              type="text"
-              placeholder="Enter your SAP ID..."
-              value={sap}
-              onChange={(e) => setSap(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleVerify()}
-              className="
-                flex-1 px-6 py-4 rounded-xl
-                bg-white/95 text-gray-900
-                border-2 border-transparent
-                focus:border-[#0F7FFF]
-                focus:outline-none focus:shadow-lg
-                placeholder-gray-400
-                font-medium
-                transition-all duration-300
-              "
-            />
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleVerify()}
-              disabled={loading}
-              className={`
-                px-8 py-4 rounded-xl font-bold text-lg
-                transition-all duration-300
-                ${
-                  loading
-                    ? "bg-gray-500 cursor-not-allowed opacity-70"
-                    : "bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] hover:shadow-2xl"
-                }
-                text-white shadow-lg
-              `}
-            >
-              {loading ? (
-                <span className="flex items-center gap-2">
-                  <span className="animate-spin">⚙️</span>
-                  Verifying...
-                </span>
-              ) : (
-                "Verify"
-              )}
-            </motion.button>
-          </div>
+          <input
+            type="text"
+            placeholder="Enter your SAP ID..."
+            value={sap}
+            onChange={(e) => setSap(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && handleVerify()}
+            className="flex-1 px-6 py-4 rounded-xl bg-white/95 text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            onClick={() => handleVerify()}
+            disabled={loading}
+            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+          >
+            {loading ? "Verifying..." : "Verify"}
+          </button>
         </motion.div>
 
-        {/* RESULT */}
         {result && (
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className={`
-              mt-12 w-full max-w-2xl p-8 rounded-2xl
-              backdrop-blur-xl border-2
-              ${
-                result.success
-                  ? "bg-gradient-to-br from-green-500/20 to-green-400/10 border-green-400/50 shadow-2xl shadow-green-500/20"
-                  : "bg-gradient-to-br from-red-500/20 to-red-400/10 border-red-400/50 shadow-2xl shadow-red-500/20"
-              }
-              transition-all duration-300
-            `}
+            transition={{ duration: 0.5 }}
+            className={`p-8 rounded-2xl backdrop-blur-xl border-2 ${
+              result.success
+                ? "bg-green-500/20 border-green-400/50"
+                : "bg-red-500/20 border-red-400/50"
+            }`}
           >
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", delay: 0.2 }}
-              className="text-5xl mb-4"
-            >
-              {result.success ? "✅" : "❌"}
-            </motion.div>
-
-            <h2
-              className={`
-                text-3xl font-bold mb-6
-                ${result.success ? "text-green-300" : "text-red-300"}
-              `}
-            >
-              {result.success ? "Certificate Verified" : "Verification Failed"}
+            <h2 className={`text-3xl font-bold mb-6 text-center ${result.success ? "text-green-300" : "text-red-300"}`}>
+              {result.success ? "✅ Verified" : "❌ Invalid"}
             </h2>
 
             {result.success && result.data ? (
-              <motion.div
-                variants={{
-                  container: { staggerChildren: 0.1 },
-                  item: { opacity: 1, y: 0, initial: { opacity: 0, y: 10 } },
-                }}
-                initial="container"
-                animate="container"
-                className="space-y-4 text-left text-white"
-              >
-                <DetailRow label="Name" value={result.data.name} />
-                <DetailRow label="Email" value={result.data.email} />
-                <DetailRow label="SAP ID" value={result.data.sap} />
-                <DetailRow
-                  label="Issued On"
-                  value={new Date(result.data.issueDate).toLocaleDateString()}
-                />
-              </motion.div>
+              <div className="space-y-4">
+                <div className="p-4 bg-white/10 rounded-lg">
+                  <p className="text-gray-400 text-sm">Name</p>
+                  <p className="text-white font-bold">{result.data.name}</p>
+                </div>
+                <div className="p-4 bg-white/10 rounded-lg">
+                  <p className="text-gray-400 text-sm">Email</p>
+                  <p className="text-white font-bold">{result.data.email}</p>
+                </div>
+                <div className="p-4 bg-white/10 rounded-lg">
+                  <p className="text-gray-400 text-sm">SAP ID</p>
+                  <p className="text-white font-bold">{result.data.sap}</p>
+                </div>
+                <div className="p-4 bg-white/10 rounded-lg">
+                  <p className="text-gray-400 text-sm">Issued On</p>
+                  <p className="text-white font-bold">{new Date(result.data.issueDate).toLocaleDateString()}</p>
+                </div>
+              </div>
             ) : (
-              <p className="text-red-200 text-lg">{result.message}</p>
+              <p className="text-center text-red-200">{result.message}</p>
             )}
           </motion.div>
         )}
       </motion.div>
     </div>
-  );
-}
-
-function DetailRow({ label, value }: { label: string; value: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex justify-between items-center p-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
-    >
-      <span className="font-semibold text-gray-300">{label}:</span>
-      <span className="text-white font-bold">{value}</span>
-    </motion.div>
   );
 }
