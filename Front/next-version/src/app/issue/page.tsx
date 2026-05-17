@@ -49,7 +49,11 @@ export default function IssuePage() {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute bottom-40 left-20 w-80 h-80 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float" />
+      <motion.div
+        className="absolute bottom-40 left-20 w-80 h-80 bg-gradient-to-r from-[#00D9FF] to-[#0F7FFF] rounded-full mix-blend-multiply filter blur-3xl opacity-15"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <motion.div
         initial={{ opacity: 0 }}

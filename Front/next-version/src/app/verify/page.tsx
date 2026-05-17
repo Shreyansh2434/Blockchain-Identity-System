@@ -62,7 +62,11 @@ export default function VerifyPage() {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float" />
+      <motion.div
+        className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-r from-[#0F7FFF] to-[#00D9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-15"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <motion.div
         initial={{ opacity: 0 }}
